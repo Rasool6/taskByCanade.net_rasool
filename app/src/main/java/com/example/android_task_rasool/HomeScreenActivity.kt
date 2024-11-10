@@ -31,7 +31,7 @@ class HomeScreenActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val stories = listOf(
+        val storiess = listOf(
             Story(1, R.drawable.pic_2, true),
             Story(2, R.drawable.pic_1, false),
             Story(3, R.drawable.pic_3, false),
@@ -40,7 +40,7 @@ class HomeScreenActivity : AppCompatActivity() {
             Story(3, R.drawable.pic_3, false),
          )
 
-        val adapter = StoryAdapter(stories)
+        val adapter = StoryAdapter(storiess)
         binding.recyclerStory.adapter = adapter
 
         val doctorList = listOf(
