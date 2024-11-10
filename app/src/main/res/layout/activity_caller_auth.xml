@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.3" />
+                app:layout_constraintGuide_percent="0.6" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/callLoaderLayout"
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="9dp"
                 android:layout_marginEnd="9dp"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guideline2">
@@ -74,6 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#FFFFFF"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent">
 
                 <!-- Back Arrow -->
@@ -84,6 +85,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_margin="16dp"
                     android:padding="8dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:focusable="true"
                     android:src="@drawable/ic_back_arrow" />
 
                 <!-- Profile Picture -->

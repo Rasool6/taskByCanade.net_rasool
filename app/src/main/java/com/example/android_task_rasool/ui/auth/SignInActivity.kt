@@ -75,8 +75,14 @@ class SignInActivity : AppCompatActivity() {
     private fun clickListeners() {
         with(binding) {
             simpleSignUpBtn.setOnClickListener {
-                startActivity(Intent(this@SignInActivity, SignUpActivity::class.java))
-            }
+                val intent = Intent(this@SignInActivity, SignUpActivity::class.java)
+                // Use ActivityOptions to add a fade-in and fade-out animation
+                val options = android.app.ActivityOptions.makeCustomAnimation(
+                    this@SignInActivity, android.R.anim.fade_in, android.R.anim.fade_out
+                )
+                // Start the new activity with the transition
+                startActivity(intent, options.toBundle())
+             }
             signInBtn.setOnClickListener {
                 val email = emailEdt.text.toString().trim()
                 val password = passwordEdt.text.toString().trim()
@@ -93,7 +99,7 @@ class SignInActivity : AppCompatActivity() {
             gitHubBtn.setOnClickListener {
                 val email = emailEdt.text.toString().trim()
                 if (email.isEmpty()) {
-                    Toast.makeText(this@SignInActivity, "Please enter email", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SignInActivity, "Please enter email only and try again", Toast.LENGTH_SHORT).show()
                 } else {
                     signInWithGitHub(email)
                 }
@@ -104,8 +110,14 @@ class SignInActivity : AppCompatActivity() {
             }
 
             passKeyBtn.setOnClickListener {
-                startActivity(Intent(this@SignInActivity, PasskeySignInActivity::class.java))
-            }
+                val intent = Intent(this@SignInActivity, PasskeySignInActivity::class.java)
+                // Use ActivityOptions to add a fade-in and fade-out animation
+                val options = android.app.ActivityOptions.makeCustomAnimation(
+                    this@SignInActivity, android.R.anim.fade_in, android.R.anim.fade_out
+                )
+                // Start the new activity with the transition
+                startActivity(intent, options.toBundle())
+             }
         }
     }
 
@@ -167,8 +179,14 @@ class SignInActivity : AppCompatActivity() {
     private fun handleAuthSuccess(displayName: String?) {
         Log.d("Auth", "Success: $displayName")
         Toast.makeText(this@SignInActivity, "Success: $displayName", Toast.LENGTH_SHORT).show()
-        startActivity(Intent(this@SignInActivity, HomeScreenActivity::class.java))
-        finish()
+        val intent = Intent(this@SignInActivity, HomeScreenActivity::class.java)
+        // Use ActivityOptions to add a fade-in and fade-out animation
+        val options = android.app.ActivityOptions.makeCustomAnimation(
+            this@SignInActivity, android.R.anim.fade_in, android.R.anim.fade_out
+        )
+        // Start the new activity with the transition
+        startActivity(intent, options.toBundle())
+         finish()
     }
 
     private fun handleAuthError(exception: Exception) {

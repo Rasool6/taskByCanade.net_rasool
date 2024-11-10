@@ -12,9 +12,12 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.example.android_task_rasool.HomeScreenActivity
 import com.example.android_task_rasool.R
 import com.example.android_task_rasool.databinding.ActivityPasskeySignInBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class PasskeySignInActivity : AppCompatActivity() {
 
@@ -42,11 +45,8 @@ class PasskeySignInActivity : AppCompatActivity() {
 
     private fun clickHere() {
         with(binding) {
-            fingerPrintBtn2.setOnClickListener {
 
-            }
             fingerPrintBtn.setOnClickListener {
-
                 authenticateUser()
             }
         }
@@ -79,8 +79,18 @@ class PasskeySignInActivity : AppCompatActivity() {
                     ).show()
                     binding.appCompatImageView2.visibility = View.VISIBLE
                     binding.appCompatImageView.visibility = View.GONE
-                    startActivity(Intent(this@PasskeySignInActivity, HomeScreenActivity::class.java))
-                }
+                    lifecycleScope.launch {
+                        delay(300)
+                    }
+
+                    val intent = Intent(this@PasskeySignInActivity, HomeScreenActivity::class.java)
+                    // Use ActivityOptions to add a fade-in and fade-out animation
+                    val options = android.app.ActivityOptions.makeCustomAnimation(
+                        this@PasskeySignInActivity, android.R.anim.fade_in, android.R.anim.fade_out
+                    )
+                    // Start the new activity with the transition
+                    startActivity(intent, options.toBundle())
+                 }
 
                 override fun onAuthenticationFailed() {
                     super.onAuthenticationFailed()

@@ -61,7 +61,15 @@ class SignUpActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Sign-Up Successful!", Toast.LENGTH_SHORT).show()
                     // Redirect to SignInActivity
-                    startActivity(Intent(this, SignInActivity::class.java))
+                    val intent = Intent(this@SignUpActivity, SignInActivity::class.java)
+                    // Use ActivityOptions to add a fade-in and fade-out animation
+                    val options = android.app.ActivityOptions.makeCustomAnimation(
+                        this@SignUpActivity, android.R.anim.fade_in, android.R.anim.fade_out
+                    )
+                    // Start the new activity with the transition
+                    startActivity(intent, options.toBundle())
+
+
                     finish()
                 } else {
                     Toast.makeText(this, "Sign-Up Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()

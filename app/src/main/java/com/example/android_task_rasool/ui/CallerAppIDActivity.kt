@@ -36,5 +36,9 @@ class CallerAppIDActivity : AppCompatActivity() {
             binding.shimmerFrameLayout.visibility = View.GONE
             binding.scrollView3.visibility= View.VISIBLE
         }
+
+        binding.backBtn.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 }

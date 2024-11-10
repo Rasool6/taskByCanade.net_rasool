@@ -16,6 +16,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        setProperty("archivesBaseName", "TaskByCanada_net_Rasool_$versionName")
+
     }
 
     buildTypes {
@@ -26,6 +28,7 @@ android {
                 "proguard-rules.pro"
             )
         }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -59,6 +62,10 @@ dependencies {
     implementation (libs.play.services.auth)
     implementation (libs.shimmer)
 
+
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
+    implementation (libs.kotlinx.coroutines.android)
 
 
 }

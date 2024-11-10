@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Android-Task-Rasool</string>
+    <string name="task_by_ncanada_net_nrasool">
+    <font color='#FFFFFF'>Task By\n</font><br/>
+    <font color='#FF0000'>Canada.net\n</font><br/>
+    <font color='#FFFFFF'>Rasool</font>
+
+</string>
 </resources>

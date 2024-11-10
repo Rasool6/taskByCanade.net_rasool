@@ -2,6 +2,7 @@ package com.example.android_task_rasool.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -33,7 +34,10 @@ class CallerAuthActivity : AppCompatActivity() {
 
         // currently applying loader for testing ...we will do accordingly
         lifecycleScope.launch {
+            binding.callLoaderLayout.visibility= View.VISIBLE
             delay(3000)
+            binding.callLoaderLayout.visibility= View.GONE
+            binding.contentLayout.visibility= View.VISIBLE
 
         }
 
@@ -50,7 +54,9 @@ class CallerAuthActivity : AppCompatActivity() {
     }
 
     private fun clicksHere() {
-
+        binding.backArrow.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
 
         binding.enterPinButton.setOnClickListener {
             if (pinBoxes.isNotEmpty()) {
@@ -79,13 +85,7 @@ class CallerAuthActivity : AppCompatActivity() {
         }
 
 
-        // Function to handle deleting the last digit
-        fun deleteDigit() {
-            if (currentIndex > 0) {
-                currentIndex--
-                pinBoxes[currentIndex].setText("")
-            }
-        }
+
 
         // Set click listeners for keypad buttons
         binding.button1.setOnClickListener { addDigit("1") }
@@ -103,7 +103,13 @@ class CallerAuthActivity : AppCompatActivity() {
 
     private fun navigateToNextScreen() {
         // Code to navigate to the next screen
-         startActivity(Intent(this, CallerAppIDActivity::class.java))
+         val intent = Intent(this@CallerAuthActivity, CallerAppIDActivity::class.java)
+        // Use ActivityOptions to add a fade-in and fade-out animation
+        val options = android.app.ActivityOptions.makeCustomAnimation(
+            this@CallerAuthActivity, android.R.anim.fade_in, android.R.anim.fade_out
+        )
+        // Start the new activity with the transition
+        startActivity(intent, options.toBundle())
     }
 
 }

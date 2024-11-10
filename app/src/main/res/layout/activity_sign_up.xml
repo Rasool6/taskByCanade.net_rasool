@@ -49,16 +49,29 @@
 
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/appCompatTextView"
+                    android:id="@+id/appCompatTextView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="42dp"
-                    android:text="Sign Up"
+                    android:text="Spiral"
                     android:textColor="@color/white"
                     android:textSize="32sp"
-                    app:fontFamily="@font/roboto_bold"
+                    app:fontFamily="@font/satoshi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="22dp"
+                    android:text="Sign up"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:fontFamily="@font/satoshi_bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView8" />
 
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -88,7 +101,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/emailTxt"
-                    app:layout_constraintWidth_percent="0.76" />
+                    app:layout_constraintWidth_percent="0.88" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/passwordTxt"
@@ -119,7 +132,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/passwordTxt"
-                    app:layout_constraintWidth_percent="0.76" />
+                    app:layout_constraintWidth_percent="0.88" />
 
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -127,17 +140,19 @@
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
                     android:background="@drawable/bg_white_rect"
+                    android:backgroundTint="@color/dark_blue"
                     android:gravity="center"
-                    android:text="Sign in"
+                    android:text="Sign up"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:backgroundTint="@color/dark_blue"
                     app:fontFamily="@font/roboto_reg"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/passwordEdt"
-                    app:layout_constraintWidth_percent="0.76" />
+                    app:layout_constraintWidth_percent="0.88" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

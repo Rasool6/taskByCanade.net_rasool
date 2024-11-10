@@ -59,7 +59,7 @@
                     android:text="Spiral"
                     android:textColor="@color/white"
                     android:textSize="32sp"
-                    app:fontFamily="@font/roboto_bold"
+                    app:fontFamily="@font/satoshi_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -87,7 +87,7 @@
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:gravity="center"
-                    app:fontFamily="@font/roboto_bold"
+                    app:fontFamily="@font/satoshi_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +103,7 @@
                     android:text="Redirecting you to your account"
                     android:textColor="@color/white"
                     android:textSize="14sp"
-                    app:fontFamily="@font/roboto_reg"
+                    app:fontFamily="@font/satoshi_bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +132,7 @@
                     android:text="Spiral"
                     android:textColor="@color/white"
                     android:textSize="32sp"
-                    app:fontFamily="@font/roboto_bold"
+                    app:fontFamily="@font/satoshi_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -147,7 +147,7 @@
                     android:text="PassKey Sign in"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    app:fontFamily="@font/roboto_bold"
+                    app:fontFamily="@font/satoshi_bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
 
@@ -162,7 +162,7 @@
                     android:text="Place your finger on the sensor to continue"
                     android:textColor="@color/white"
                     android:textSize="12sp"
-                    app:fontFamily="@font/roboto_reg"
+                    app:fontFamily="@font/satoshi_medium"
                     app:layout_constraintStart_toStartOf="@+id/emailTxt"
                     app:layout_constraintTop_toBottomOf="@+id/emailTxt"/>
 
@@ -190,7 +190,7 @@
                     android:text="Cancel"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    app:fontFamily="@font/roboto_reg"
+                    app:fontFamily="@font/satoshi_bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

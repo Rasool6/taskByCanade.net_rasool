@@ -46,7 +46,7 @@ class StoryAdapter(private val stories: List<Story>) : RecyclerView.Adapter<Recy
     // ViewHolder for `my_item_story` layout using View Binding
     inner class MyStoryViewHolder(private val binding: MyItemStoryBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(story: Story) {
-           // binding.addStoryId.setImageDrawable(story.storyImg)
+            binding.nameTxt.text=story.name
             // Set other data and click listeners if needed
         }
     }
@@ -54,6 +54,7 @@ class StoryAdapter(private val stories: List<Story>) : RecyclerView.Adapter<Recy
     // ViewHolder for `item_story` layout using View Binding
     inner class OtherStoryViewHolder(private val binding: ItemStoryBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(story: Story) {
+            binding.nameTxt.text=story.name
             binding.storyImg.setImageDrawable(context?.let { ContextCompat.getDrawable(it,story.storyImg) })
             // Set other data and click listeners if needed
         }

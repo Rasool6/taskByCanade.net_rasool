@@ -26,7 +26,7 @@
         android:singleLine="false"
         android:textColor="@color/black_150"
         android:textSize="12sp"
-        app:fontFamily="@font/roboto_reg"
+        app:fontFamily="@font/satoshi_medium"
         app:layout_constraintEnd_toEndOf="@+id/appCompatImageView5"
         app:layout_constraintStart_toStartOf="@+id/appCompatImageView5"
         app:layout_constraintTop_toBottomOf="@+id/appCompatImageView5" />
