@@ -1,7 +1,3 @@
-Here's a sample `README.md` text based on your requirements:
-
----
-
 # Android Task Application
 
 This project is an Android application developed to implement a Figma design while incorporating various authentication methods. Below is a summary of the features and technologies used.
