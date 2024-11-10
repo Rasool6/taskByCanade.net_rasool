@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.CallerAuthActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/callLoaderLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="9dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView5"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bg_cat_green_rect"
+                    android:padding="24dp"
+                    android:src="@drawable/ic_green_call"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/frequentViewAllBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="false"
+                    android:text="Caller\nID"
+                    android:textColor="@color/black_150"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto_reg"
+                    app:layout_constraintEnd_toEndOf="@+id/appCompatImageView5"
+                    app:layout_constraintStart_toStartOf="@+id/appCompatImageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatImageView5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/contentLayout"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <!-- Back Arrow -->
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="16dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_back_arrow" />
+
+                <!-- Profile Picture -->
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/bg_boarder_gredient"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_test_profile" />
+
+                <!-- User Name -->
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profileImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_reg"
+                    android:text="Jane Doe Matthews"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <!-- Phone Number -->
+                <TextView
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="0712364748"
+                    android:textColor="#A9A9A9"
+                    android:textSize="14sp" />
+
+                <!-- PIN Entry Boxes -->
+                <LinearLayout
+                    android:id="@+id/pinLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phoneNumber"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <!-- Four PIN Boxes -->
+                    <EditText
+                        android:id="@+id/pinBox1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/pin_box_background"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textColor="#3498DB"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/pinBox2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/pin_box_background"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textColor="#3498DB"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/pinBox3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/pin_box_background"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textColor="#3498DB"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/pinBox4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/pin_box_background"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textColor="#3498DB"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <!-- Enter Pin Button -->
+                <TextView
+                    android:id="@+id/enterPinButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/pinLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/button_background"
+                    android:gravity="center"
+                    android:text="Enter Pin"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <!-- Number Pad -->
+                <GridLayout
+                    android:id="@+id/numberPad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/enterPinButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:columnCount="3"
+                    android:rowCount="4">
+
+                    <!-- Number buttons 1 to 9 -->
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="@font/roboto_reg"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="@font/roboto_reg"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="@font/roboto_reg"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="@font/roboto_reg"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="@font/roboto_reg"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button6"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="@font/roboto_reg"
+                        android:text="6"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button7"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:text="7"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button8"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="@font/roboto_reg"
+                        android:text="8"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/button9"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="@font/roboto_reg"
+                        android:text="9"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <!-- Zero button and fingerprint icon -->
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="80dp" />
+
+                    <Button
+                        android:id="@+id/button0"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="@font/roboto_reg"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:padding="16dp"
+                        android:src="@drawable/fingerprint_dialog_fp_icon"
+                        app:tint="@color/black" />
+                </GridLayout>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

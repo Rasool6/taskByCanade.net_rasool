@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "333552956512",
+    "project_id": "dbfortasksonly",
+    "storage_bucket": "dbfortasksonly.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333552956512:android:d8d24907b3974b5a8d7f05",
+        "android_client_info": {
+          "package_name": "com.example.android_task_rasool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333552956512-vaq971stqs4ta983jtf0d7i3vsnr5nsj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android_task_rasool",
+            "certificate_hash": "ea73c7c2c7ba4694be01aedc51fe6e4bc238d64a"
+          }
+        },
+        {
+          "client_id": "333552956512-qdjo606fg2ogar99rqj63rir5vin7p20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA93xMp3qvT6H_GiKQ_UykknfKutWAT3r8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333552956512-qdjo606fg2ogar99rqj63rir5vin7p20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
